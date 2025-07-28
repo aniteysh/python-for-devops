@@ -17,8 +17,17 @@ def most_common_words(input):
             array[word] += 1
         else:
             array[word] = 1
-    return array 
+    
+
+def string_with_all_vowels_removed(input):
+    vowels = "aeiouAEIOU"
+    nonVowelString = ""
+    for char in input:
+        if char not in vowels:
+            nonVowelString += char
+    return nonVowelString
 
 print (number_of_words(input))
 print (unique_words(input))
 print (most_common_words(input))
+print (string_with_all_vowels_removed(input))
