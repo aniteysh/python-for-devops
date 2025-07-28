@@ -1,4 +1,4 @@
-input = "Hello Hello World. This is a fantastic world"
+input = "Hello Hello World This is a fantastic World"
 
 def number_of_words(input):
     words = input.split()
@@ -17,7 +17,12 @@ def most_common_words(input):
             array[word] += 1
         else:
             array[word] = 1
-    
+    max_count = max(array.values())
+    max_word = []
+    for word, count in array.items():
+        if count == max_count:
+            max_word.append(word)
+    return max_count, max_word
 
 def string_with_all_vowels_removed(input):
     vowels = "aeiouAEIOU"
